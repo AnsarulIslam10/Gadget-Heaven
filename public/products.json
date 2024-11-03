@@ -1,0 +1,185 @@
+{
+    "products": [
+      {
+        "product_id": 1,
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/2vF7dST/dell-xps-15.png",
+        "category": "Laptop",
+        "price": 1200,
+        "description": "High-performance laptop with stunning display and powerful processor.",
+        "specification": [
+          "16gb ram",
+          "512gb ssd",
+          "intel i7 processor"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 2,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/p4Rmk56/hp-spectre-360.png",
+        "category": "Laptop",
+        "price": 1050,
+        "description": "Premium 2-in-1 laptop with touchscreen and sleek design.",
+        "specification": [
+          "8gb ram",
+          "256gb ssd",
+          "intel i5 processor"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 3,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/n7nrnC1/Lenovo-Think-Pad-X1-Carbon.jpg",
+        "category": "Laptop",
+        "price": 1350,
+        "description": "Business laptop with robust build quality and impressive battery life.",
+        "specification": [
+          "16gb ram",
+          "512gb ssd",
+          "intel i7 processor"
+        ],
+        "availability": false,
+        "rating": 4.7
+      },
+      {
+        "product_id": 4,
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://i.ibb.co.com/Rjk7KkZ/Acer-Aspire-5.jpg",
+        "category": "Laptop",
+        "price": 500,
+        "description": "Affordable laptop for everyday tasks with long battery life.",
+        "specification": [
+          "4gb ram",
+          "128gb ssd",
+          "intel celeron processor"
+        ],
+        "availability": true,
+        "rating": 4.0
+      },
+      {
+        "product_id": 5,
+        "product_title": "ASUS ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/CtLJbTX/ASUS-ROG-Zephyrus-G14.jpg",
+        "category": "Laptop",
+        "price": 1500,
+        "description": "Gaming laptop with high refresh rate display and powerful graphics.",
+        "specification": [
+          "16gb ram",
+          "1tb ssd",
+          "nvidia rtx 2060"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 6,
+        "product_title": "Apple MacBook Pro 16",
+        "product_image": "https://i.ibb.co.com/zGrDZms/Apple-Mac-Book-Pro-16.webp",
+        "category": "Laptop",
+        "price": 2400,
+        "description": "High-end MacBook with M1 Pro chip and large Retina display.",
+        "specification": [
+          "16gb ram",
+          "512gb ssd",
+          "m1 pro chip"
+        ],
+        "availability": false,
+        "rating": 4.9
+      },
+      {
+        "product_id": 7,
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.ibb.co.com/6rqXnZn/Samsung-Galaxy-S21.jpg",
+        "category": "Phone",
+        "price": 799,
+        "description": "Flagship Android phone with advanced camera and display.",
+        "specification": [
+          "6.2-inch display",
+          "128gb storage",
+          "triple-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 8,
+        "product_title": "Google Pixel 6",
+        "product_image": "https://i.ibb.co.com/wrDz4v6/Google-Pixel-6.jpg",
+        "category": "Phone",
+        "price": 699,
+        "description": "Google's latest smartphone with impressive AI camera features.",
+        "specification": [
+          "6.4-inch display",
+          "128gb storage",
+          "dual-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.5
+      },
+      {
+        "product_id": 9,
+        "product_title": "Fitbit Charge 5",
+        "product_image": "https://i.ibb.co.com/KxW5H0D/Fitbit-Charge-5.jpg",
+        "category": "Smart Watches",
+        "price": 179,
+        "description": "Fitness tracker with health metrics and activity tracking.",
+        "specification": [
+          "heart-rate monitor",
+          "sleep tracking",
+          "gps"
+        ],
+        "availability": true,
+        "rating": 4.3
+      },
+      {
+        "product_id": 10,
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "https://i.ibb.co.com/MhfwdVf/Samsung-Galaxy-Watch-4.jpg",
+        "category": "Smart Watches",
+        "price": 249,
+        "description": "Smartwatch with fitness tracking and Wear OS by Google.",
+        "specification": [
+          "amoled display",
+          "wear os",
+          "ecg monitor"
+        ],
+        "availability": false,
+        "rating": 4.6
+      },
+      {
+        "product_id": 11,
+        "product_title": "Apple iPhone 13",
+        "product_image": "https://i.ibb.co.com/6vdjXyq/Apple-i-Phone-13.webp",
+        "category": "iPhone",
+        "price": 799,
+        "description": "The latest iPhone model with advanced dual-camera system and 5G.",
+        "specification": [
+          "6.1-inch oled display",
+          "128gb storage",
+          "5g capability"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 12,
+        "product_title": "Apple iPhone 13 Pro",
+        "product_image": "https://i.ibb.co.com/pv2PjdD/Apple-i-Phone-13-Pro.jpg",
+        "category": "iPhone",
+        "price": 999,
+        "description": "Pro model of iPhone 13 with triple-camera system and ProMotion display.",
+        "specification": [
+          "6.1-inch oled display",
+          "128gb storage",
+          "triple-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.8
+      }
+    ]
+  }
+  
