@@ -1,23 +1,27 @@
-import React from 'react';
-import Hero from '../Hero/Hero';
-import Banner from '../Banner/Banner';
-import Categories from '../Categories/Categories';
+import React from "react";
+import Hero from "../Hero/Hero";
+import Banner from "../Banner/Banner";
+import Categories from "../Categories/Categories";
+import Gedgets from "../Gedgets/Gedgets";
 
 const Home = () => {
-    return (
-        <div>
-            <Hero></Hero>
-            <Banner></Banner>
-            <div className='grid grid-cols-12 max-w-7xl mx-auto'>
-                <div className='col-span-3 bg-white p-8 mx-4 rounded-xl'>
-                    <Categories></Categories>
-                </div>
-                <div className='col-span-9'>
-                    <h1>Hi</h1>
-                </div>
-            </div>
+  return (
+    <div>
+      <Hero></Hero>
+      <Banner></Banner>
+      <div>
+        <h2 className="text-center text-4xl font-bold mb-12">Explore Cutting-Edge Gadgets</h2>
+        <div className="flex flex-col md:grid md:grid-cols-12 max-w-7xl mx-auto">
+          <div className="col-span-3 bg-white p-8 mx-4 rounded-xl">
+            <Categories></Categories>
+          </div>
+          <div className="col-span-9">
+            <Gedgets></Gedgets>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Home;
