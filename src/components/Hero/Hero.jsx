@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-6xl mx-auto hero bg-purple-600 text-white pb-56 pt-8 rounded-xl">
+    <div className="max-w-7xl mx-auto hero bg-purple-600 text-white pb-56 pt-8 rounded-xl">
       <div className="hero-content text-center">
         <div className="max-w-4xl">
           <h1 className="text-5xl font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>

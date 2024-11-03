@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-white text-black py-24">
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-7xl mx-auto">
         <div className="text-center border-b-2 pb-8">
           <h2 className="text-4xl font-bold mb-3">Gadget Heaven</h2>
           <p className="text-gray-500">
