@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 const Navbar = () => {
+    const {pathname} = useLocation();
   const links = (
     <>
       <li>
@@ -16,7 +17,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar max-w-7xl mx-auto">
+    <div className={`navbar max-w-7xl mx-auto ${pathname === '/' ? 'bg-purple-600': 'bg-White'}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
