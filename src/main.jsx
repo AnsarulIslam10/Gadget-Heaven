@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import Statistics from "./components/Statistics/Statistics";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Gedgets from "./components/Gedgets/Gedgets";
+import GedgetDetails from "./components/GedgetDetails/GedgetDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,20 +20,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        // loader: ()=> fetch('./categories.json'),
         loader: ()=> fetch('./products.json'),
-        // 
+        
         children: [
           {
             path: '/',
             element: <Gedgets></Gedgets>,
             loader: ()=> fetch('./products.json'),
           },
-          {
-            path: '/category/:category',
-            element: <Gedgets></Gedgets>,
-            loader: ()=> fetch('./products.json'),
-          }
         ]
       },
       {
@@ -42,7 +37,12 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>
-      }
+      },
+      {
+        path: '/gedgetDetails/:product_id',
+        element: <GedgetDetails></GedgetDetails>,
+        loader: ()=> fetch('./products.json')
+       }
     ]
   },
   

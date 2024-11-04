@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 const Navbar = () => {
-    const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const links = (
     <>
       <li>
@@ -17,7 +17,11 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className={`navbar rounded-t-xl max-w-7xl mt-8 mx-auto ${pathname === '/' ? 'bg-purple-600': 'bg-White'}`}>
+    <div
+      className={`navbar rounded-t-xl max-w-7xl mt-8 mx-auto ${
+        pathname === "/" ? "bg-purple-600" : "bg-White"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,9 +52,14 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <IoCartOutline />
-        <IoHeartOutline />
+      <div className="navbar-end gap-2">
+        <div className="p-2 bg-white rounded-full flex items-center">
+          <IoCartOutline />
+          
+        </div>
+        <div className="p-2 bg-white rounded-full">
+          <IoHeartOutline />
+        </div>
       </div>
     </div>
   );
