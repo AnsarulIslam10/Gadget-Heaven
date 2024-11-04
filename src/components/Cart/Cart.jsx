@@ -20,7 +20,7 @@ const Cart = ({ cart }) => {
         <IoCloseCircleOutline></IoCloseCircleOutline>
       </button>
     </div>
-  );
+  );   
 };
 
 export default Cart;
