@@ -1,14 +1,21 @@
-import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Categories = ({categories}) => {
-    const navigate = useNavigate();
-    const handleNavigate = () =>{
-        navigate('/');
-    }
+const Categories = () => {
+  const [categories, setCategories] = useState([]);
+
+ useEffect(()=>{
+    fetch('/categories.json')
+    .then(res=>res.json())
+    .then(data=> setCategories(data))
+ },[])
+    
     return (
         <div className='flex flex-col gap-2 text-center'>
-           
+           <NavLink to={'/'}>All Products</NavLink>
+           {
+            categories.map(category => <NavLink key={category.category_id} to={`/category/${category.category}`}>{category.category}</NavLink>)
+           }
         </div>
     );
 };
