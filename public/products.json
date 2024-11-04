@@ -1,5 +1,4 @@
-{
-    "products": [
+[
       {
         "product_id": 1,
         "product_title": "Dell XPS 15",
@@ -180,6 +179,5 @@
         "availability": true,
         "rating": 4.8
       }
-    ]
-  }
+]
   
