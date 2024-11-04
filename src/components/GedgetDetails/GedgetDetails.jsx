@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
+import { addToCart, addToWishList } from "../../utils/addToDb";
 const GedgetDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
@@ -9,6 +10,7 @@ const GedgetDetails = () => {
   const product = data.find((p) => p.product_id === id);
 
   const {
+    product_id: currentId,
     product_title,
     product_image,
     price,
@@ -17,7 +19,13 @@ const GedgetDetails = () => {
     description,
     availability,
   } = product;
-  // console.log(currentProductId)
+
+  const handleAddToCart = (id) =>{
+    addToCart(id)
+  }
+  const handleAddToWishList = (id) =>{
+    addToWishList(id)
+  }
 
   return (
     <div className="hero bg-white relative -top-52 max-w-7xl mx-auto rounded-xl">
@@ -59,10 +67,10 @@ const GedgetDetails = () => {
             ></ReactStars>
             <p className="p-2 bg-gray-200 rounded-xl">{rating}</p>
           </div>
-          <button className="btn btn-primary">
+          <button onClick={()=>handleAddToCart(currentId)} className="btn btn-primary">
             Add to Cart <IoCartOutline></IoCartOutline>
           </button>
-          <button>
+          <button onClick={()=>handleAddToWishList(currentId)}>
             <IoHeartOutline></IoHeartOutline>
           </button>
         </div>
