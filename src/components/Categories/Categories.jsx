@@ -8,10 +8,7 @@ const Categories = ({categories}) => {
     }
     return (
         <div className='flex flex-col gap-2 text-center'>
-           <NavLink><button onClick={handleNavigate}>All Product</button></NavLink>
-           {
-            categories.map(category => <NavLink key={category.id} to={`/category/${category.category}`}>{category.category}</NavLink>)
-           }
+           
         </div>
     );
 };
