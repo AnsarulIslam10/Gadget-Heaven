@@ -20,13 +20,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('./products.json'),
-        
+        loader: ()=> fetch('/products.json'),
         children: [
           {
             path: '/',
             element: <Gedgets></Gedgets>,
-            loader: ()=> fetch('./products.json'),
+            loader: ()=> fetch('/products.json'),
           },
         ]
       },
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/gedgetDetails/:product_id',
         element: <GedgetDetails></GedgetDetails>,
-        loader: ()=> fetch('./products.json')
+        loader: ()=> fetch('/products.json')
        }
     ]
   },
