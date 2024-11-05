@@ -26,7 +26,9 @@ const Hero = () => {
             <Heading title={"Statistics"}></Heading>
           ) : pathname === "/dashboard" || pathname === '/dashboard/cart' || pathname === '/dashboard/wishlist' ? (
             <Heading title={"Dashboard"}></Heading>
-          ) : (
+          ) : pathname === "/faq" ? (
+            <Heading title={"FAQ"}></Heading>
+          )  : (
             <Heading title={"Product Details"}></Heading>
           )}
           <p className="py-6 text-gray-300">

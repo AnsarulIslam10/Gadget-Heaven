@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import { useCart } from "../../utils/CountContext.jsx";
-const Navbar = ({cartCount}) => {
+const Navbar = ({ cartCount }) => {
   const { pathname } = useLocation();
-  
+
   const links = (
     <>
       <li>
@@ -16,12 +16,21 @@ const Navbar = ({cartCount}) => {
       <li>
         <NavLink to={"/dashboard"}>Dashboard</NavLink>
       </li>
+      <li>
+        <NavLink to={"/faq"}>FAQ</NavLink>
+      </li>
     </>
   );
   return (
     <div
       className={`navbar rounded-t-xl max-w-7xl pt-4 mx-auto ${
-        (pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? "bg-purple-600" : "bg-[##F7F7F7]"
+        pathname === "/" ||
+        pathname === "/category/Laptop" ||
+        pathname === "/category/iPhone" ||
+        pathname === "/category/Phone" ||
+        pathname === "/category/Smart%20Watches"
+          ? "bg-purple-600"
+          : "bg-[##F7F7F7]"
       }`}
     >
       <div className="navbar-start">
@@ -52,7 +61,7 @@ const Navbar = ({cartCount}) => {
         <a className="btn btn-ghost text-xl">Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 md:text-lg md:font-medium gap-3">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
         <div className="p-2 bg-white rounded-full flex items-center">
@@ -61,7 +70,6 @@ const Navbar = ({cartCount}) => {
         </div>
         <div className="p-2 bg-white rounded-full">
           <IoHeartOutline />
-          
         </div>
       </div>
     </div>

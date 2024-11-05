@@ -12,6 +12,7 @@ import Cart from "./components/Cart/Cart";
 import WishList from "./components/WishList/WishList";
 import { CartProvider } from "./utils/CountContext.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import Faq from "./components/Faq/Faq.jsx";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
         element: <GedgetDetails></GedgetDetails>,
         loader: () => fetch("/products.json"),
       },
+      {
+        path: '/faq',
+        element: <Faq></Faq>
+      }
     ],
   },
 ]);
