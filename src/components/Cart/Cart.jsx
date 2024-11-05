@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate} from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { RiSortDesc } from "react-icons/ri";
 import { getAddToCart } from "../../utils/addToDb";
+import { toast } from "react-toastify";
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const allProduct = useLoaderData();
@@ -35,6 +36,7 @@ const Cart = () => {
     const updatedCart = cart.filter(item => item.product_id !== id);
     setCart(updatedCart);
     localStorage.setItem('cart-items', JSON.stringify(updatedCart));
+    toast.success("Product Removed From Cart")
   }
   return (
     <div>

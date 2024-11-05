@@ -41,12 +41,12 @@ const Hero = () => {
               pathname === "/dashboard/cart" ||
               pathname === "/dashboard/wishlist" ? (
               <>
-                <NavLink to={"/dashboard/cart"} className="btn rounded-full">
+                <NavLink to={"/dashboard/cart"} className={({ isActive }) => `btn btn-outline font-bold rounded-full ${isActive || pathname==='/dashboard' ? 'bg-white text-black':''}`}>
                   Cart
                 </NavLink>
                 <NavLink
                   to={"/dashboard/wishlist"}
-                  className="btn rounded-full"
+                  className={({ isActive }) => `btn btn-outline font-bold rounded-full ${isActive ? 'bg-white text-black':''}`}
                 >
                   Wishlist
                 </NavLink>

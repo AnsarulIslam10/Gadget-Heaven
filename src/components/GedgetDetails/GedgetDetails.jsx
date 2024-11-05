@@ -4,7 +4,6 @@ import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
 import { addToCart, addToWishList } from "../../utils/addToDb";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { toast } from "react-toastify";
 const GedgetDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
@@ -24,7 +23,6 @@ const GedgetDetails = () => {
 
   const handleAddToCart = (id) => {
     addToCart(id);
-    toast('cart')
   };
   const handleAddToWishList = (id) => {
     addToWishList(id);

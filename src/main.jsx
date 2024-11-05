@@ -12,6 +12,7 @@ import Cart from "./components/Cart/Cart";
 import WishList from "./components/WishList/WishList";
 import { CartProvider } from "./utils/CountContext.jsx";
 import { HelmetProvider } from "react-helmet-async";
+
 const router = createBrowserRouter([
   {
     path: "/",

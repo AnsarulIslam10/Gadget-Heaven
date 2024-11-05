@@ -13,12 +13,12 @@ const addToCart=(id)=>{
     const storedCart = getAddToCart();
     if (storedCart.includes(id)) {
         console.log(id, 'already exist')
-        toast.warning('product already added')
+        toast.warning('Product Already Added')
     }else{
         storedCart.push(id);
         const storedCartStr =JSON.stringify(storedCart)
         localStorage.setItem('cart-items', storedCartStr)
-        toast('Product added to your cart')
+        toast.success('Product Added To Cart')
     }
 }
 
@@ -40,7 +40,7 @@ const addToWishList=(id)=>{
         storedWishList.push(id);
         const storedWishListStr =JSON.stringify(storedWishList)
         localStorage.setItem('wish-items', storedWishListStr)
-        toast('product added to wishlist')
+        toast.success('Product Added To Wishlist')
     }
 }
 
