@@ -178,5 +178,95 @@
     ],
     "availability": true,
     "rating": 4.8
+  },
+  {
+    "product_id": 13,
+    "product_title": "HP Pavilion Gaming Desktop",
+    "product_image": "https://i.ibb.co.com/wwcKnB3/HP-Pavilion-Gaming-Desktop.jpg",
+    "category": "Computers",
+    "price": 900,
+    "description": "Gaming desktop with powerful performance and customizable RGB lighting.",
+    "specification": [
+      "16gb ram",
+      "1tb hdd",
+      "intel i5 processor"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 14,
+    "product_title": "iMac 24",
+    "product_image": "https://i.ibb.co.com/k26DSZQ/iMac-24.jpg",
+    "category": "Computers",
+    "price": 1300,
+    "description": "All-in-one computer with M1 chip and stunning Retina display.",
+    "specification": [
+      "8gb ram",
+      "256gb ssd",
+      "m1 chip"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 15,
+    "product_title": "Anker PowerCore 10000",
+    "product_image": "https://i.ibb.co.com/5v150r6/Anker-Power-Core-10000.png",
+    "category": "Power Banks",
+    "price": 30,
+    "description": "Compact and lightweight power bank with 10000mAh capacity.",
+    "specification": [
+      "USB-C input",
+      "fast charging",
+      "portable design"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 16,
+    "product_title": "RAVPower 26800mAh Power Bank",
+    "product_image": "https://i.ibb.co.com/mv7vHFR/RAVPower-26800m-Ah-Power-Bank.jpg",
+    "category": "Power Banks",
+    "price": 40,
+    "description": "High-capacity power bank with multiple ports for charging.",
+    "specification": [
+      "26800mAh capacity",
+      "3 USB output",
+      "LED indicators"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 17,
+    "product_title": "Belkin 30W USB-C Charger",
+    "product_image": "https://i.ibb.co.com/WfwfNDV/Belkin-30-W-USB-C-Charger.webp",
+    "category": "Chargers",
+    "price": 25,
+    "description": "Compact USB-C charger with fast charging capabilities.",
+    "specification": [
+      "30W power delivery",
+      "compatible with all USB-C devices",
+      "lightweight design"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 18,
+    "product_title": "Anker 20W USB-C Charger",
+    "product_image": "https://i.ibb.co.com/0XcKBfs/Anker-20-W-USB-C-Charger.webp",
+    "category": "Chargers",
+    "price": 20,
+    "description": "Fast USB-C wall charger for iPhone and Android devices.",
+    "specification": [
+      "20W power delivery",
+      "foldable plug",
+      "compact size"
+    ],
+    "availability": true,
+    "rating": 4.8
   }
 ]

@@ -28,6 +28,9 @@ const Navbar = ({ cartCount }) => {
         pathname === "/category/Laptop" ||
         pathname === "/category/iPhone" ||
         pathname === "/category/Phone" ||
+        pathname === "/category/Computers" ||
+        pathname === "/category/Chargers" ||
+        pathname === "/category/Power%20Banks" ||
         pathname === "/category/Smart%20Watches"
           ? "bg-purple-600"
           : "bg-[##F7F7F7]"

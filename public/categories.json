@@ -1,18 +1,30 @@
 [
-    {
-      "id": 1,
-      "category": "Laptop"
-    },
-    {
-      "id": 2,
-      "category": "Phone"
-    },
-    {
-      "id": 3,
-      "category": "Smart Watches"
-    },
-    {
-      "id": 4,
-      "category": "iPhone"
-    }
-  ]
+  {
+    "id": 1,
+    "category": "Laptop"
+  },
+  {
+    "id": 2,
+    "category": "Phone"
+  },
+  {
+    "id": 3,
+    "category": "Smart Watches"
+  },
+  {
+    "id": 4,
+    "category": "iPhone"
+  },
+  {
+    "id": 5,
+    "category": "Computers"
+  },
+  {
+    "id": 6,
+    "category": "Chargers"
+  },
+  {
+    "id": 7,
+    "category": "Power Banks"
+  }
+]
