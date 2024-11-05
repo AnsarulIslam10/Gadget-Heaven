@@ -10,7 +10,7 @@ const GedgetDetails = () => {
   const id = parseInt(product_id);
   const data = useLoaderData();
   const product = data.find((p) => p.product_id === id);
-  const [activeStatus, setActiveStatus] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
   const {
     product_id: currentId,
     product_title,
@@ -29,7 +29,7 @@ const GedgetDetails = () => {
   const handleAddToWishList = (id) => {
     addToWishList(id);
     console.log('adding to wishlist', id)
-    setActiveStatus(true)
+    setIsDisabled(true)
   };
 
 
@@ -84,7 +84,7 @@ const GedgetDetails = () => {
           >
             Add to Cart <IoCartOutline className="text-3xl"></IoCartOutline>
           </button>
-          <button onClick={() => handleAddToWishList(currentId)} className={`text-2xl p-4 bg-gray-100 rounded-full ${activeStatus? 'bg-gray-400 cursor-not-allowed': 'bg-gray-100 hover:bg-gray-300'}`} disabled={activeStatus}>
+          <button onClick={() => handleAddToWishList(currentId)} className={`text-2xl p-4 bg-gray-100 rounded-full ${isDisabled? 'bg-gray-400 cursor-not-allowed': 'bg-gray-100 hover:bg-gray-300'}`} disabled={isDisabled}>
             <IoHeartOutline></IoHeartOutline>
           </button>
           </div>

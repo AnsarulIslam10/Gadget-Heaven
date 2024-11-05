@@ -7,7 +7,7 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const allProduct = useLoaderData();
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     const storedCart = getAddToCart();
     const storedCartInt = storedCart.map((id) => parseInt(id));
@@ -24,11 +24,9 @@ const Cart = () => {
    
   }
 
-  const handlePurchase = () =>{
+  const handleModalClose =()=>{
     setCart([]);
     localStorage.clear();
-  }
-  const handleModalClose =()=>{
     navigate('/')
   }
   const totalCost = cart.reduce((a,b) => a + b.price, 0)
@@ -50,9 +48,9 @@ const Cart = () => {
             Sort By Price <RiSortDesc className="text-xl" />
           </button>
           <button
-            onClick={() => {document.getElementById("my_modal_1").showModal(); handlePurchase()}}
+            onClick={() => document.getElementById("my_modal_1").showModal()}
             className="btn bg-purple-500 rounded-full text-white"
-          >
+          disabled={cart.length === 0 || totalCost === 0} >
             Perchase
           </button>
         </div>
@@ -66,11 +64,15 @@ const Cart = () => {
       {/* modal */}
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close
+          <div className="flex flex-col items-center">
+          <img className="mb-2" src="https://i.ibb.co.com/kSJ5z0f/Group.png" alt="" />
+          <h3 className="font-bold text-2xl">Payment Successfully</h3>
+          <p className="py-2">
+          Thanks for purchasing.
           </p>
-          <div className="modal-action">
+          <p className="font-bold">Total:{totalCost}</p>
+          </div>
+          <div className="modal-action flex justify-center">
             <form method="dialog">
               <button onClick={handleModalClose} className="btn">
                 Close
