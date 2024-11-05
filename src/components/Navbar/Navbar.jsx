@@ -20,8 +20,8 @@ const Navbar = ({cartCount}) => {
   );
   return (
     <div
-      className={`navbar rounded-t-xl max-w-7xl mt-8 mx-auto ${
-        (pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? "bg-purple-600" : ""
+      className={`navbar rounded-t-xl max-w-7xl pt-4 mx-auto ${
+        (pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? "bg-purple-600" : "bg-[##F7F7F7]"
       }`}
     >
       <div className="navbar-start">

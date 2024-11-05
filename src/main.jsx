@@ -10,7 +10,6 @@ import Gedgets from "./components/Gedgets/Gedgets";
 import GedgetDetails from "./components/GedgetDetails/GedgetDetails";
 import Cart from "./components/Cart/Cart";
 import WishList from "./components/WishList/WishList";
-import { ToastContainer } from "react-toastify";
 import { CartProvider } from "./utils/CountContext.jsx";
 import { HelmetProvider } from "react-helmet-async";
 const router = createBrowserRouter([
@@ -68,18 +67,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
       <RouterProvider router={router} />
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </HelmetProvider>
   </React.StrictMode>
 );

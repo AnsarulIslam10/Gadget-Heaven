@@ -30,8 +30,9 @@ const Cart = () => {
     navigate('/')
    
   }
-
+  const totalCost = cart.reduce((a,b) => a + b.price, 0)
   console.log(cart.length)
+  
   return (
     <div>
       <div className="flex justify-between mt-4">
@@ -39,7 +40,7 @@ const Cart = () => {
           <h2 className="text-4xl font-bold">Cart</h2>
         </div>
         <div className="flex items-center gap-2">
-          <h3 className="text-lg font-bold">Total Cost: 000</h3>
+          <h3 className="text-lg font-bold">Total Cost: ${totalCost}</h3>
           <button onClick={handleSortByPrice} className="btn btn-ghost border-4 border-purple-500 rounded-full font-bold text-purple-500">
             Sort By Price <RiSortDesc className="text-xl" />
           </button>

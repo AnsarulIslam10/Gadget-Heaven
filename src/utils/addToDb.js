@@ -13,6 +13,7 @@ const addToCart=(id)=>{
     const storedCart = getAddToCart();
     if (storedCart.includes(id)) {
         console.log(id, 'already exist')
+        toast.warning('product already added')
     }else{
         storedCart.push(id);
         const storedCartStr =JSON.stringify(storedCart)
