@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
@@ -10,7 +10,7 @@ const GedgetDetails = () => {
   const id = parseInt(product_id);
   const data = useLoaderData();
   const product = data.find((p) => p.product_id === id);
-
+  const [activeStatus, setActiveStatus] = useState(false)
   const {
     product_id: currentId,
     product_title,
@@ -29,8 +29,10 @@ const GedgetDetails = () => {
   const handleAddToWishList = (id) => {
     addToWishList(id);
     console.log('adding to wishlist', id)
-
+    setActiveStatus(true)
   };
+
+
 
   return (
     <div className="hero bg-white relative -top-32 max-w-7xl mx-auto rounded-xl">
@@ -75,15 +77,17 @@ const GedgetDetails = () => {
             ></ReactStars>
             <p className="p-2 bg-gray-200 rounded-xl">{rating}</p>
           </div>
+          <div className="flex items-center gap-2">
           <button
             onClick={() => handleAddToCart(currentId)}
-            className="btn btn-primary"
+            className="btn btn-primary hover:bg-purple-400"
           >
-            Add to Cart <IoCartOutline></IoCartOutline>
+            Add to Cart <IoCartOutline className="text-3xl"></IoCartOutline>
           </button>
-          <button className="text-2xl p-4 bg-gray-100 rounded-full" onClick={() => handleAddToWishList(currentId)}>
+          <button onClick={() => handleAddToWishList(currentId)} className={`text-2xl p-4 bg-gray-100 rounded-full ${activeStatus? 'bg-gray-400 cursor-not-allowed': 'bg-gray-100 hover:bg-gray-300'}`} disabled={activeStatus}>
             <IoHeartOutline></IoHeartOutline>
           </button>
+          </div>
         </div>
       </div>
     </div>
