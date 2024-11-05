@@ -13,11 +13,13 @@ import WishList from "./components/WishList/WishList";
 import { CartProvider } from "./utils/CountContext.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import Faq from "./components/Faq/Faq.jsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
