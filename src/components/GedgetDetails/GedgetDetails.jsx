@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import React, { createContext, useContext, useState } from "react";
+import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
-import { addToCart, addToWishList } from "../../utils/addToDb";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { addToCart, addToWishList, getAddToCart, getAddToWishList } from "../../utils/addToDb";
+import { Helmet } from "react-helmet-async";
+
+
 const GedgetDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
@@ -21,13 +23,20 @@ const GedgetDetails = () => {
     availability,
   } = product;
 
+const { setCartLength, setWishlistLength } = useOutletContext();
   const handleAddToCart = (id) => {
     addToCart(id);
+    const cart = getAddToCart();
+    const newCartLength = cart.length;
+    setCartLength(newCartLength);
+    
   };
   const handleAddToWishList = (id) => {
     addToWishList(id);
-    console.log('adding to wishlist', id)
     setIsDisabled(true)
+    const wish = getAddToWishList();
+    const newWishlistLength = wish.length;
+    setWishlistLength(newWishlistLength)
   };
 
 

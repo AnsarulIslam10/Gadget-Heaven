@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useNavigate} from "react-router-dom";
+import { useLoaderData, useNavigate, useOutletContext} from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { RiSortDesc } from "react-icons/ri";
 import { getAddToCart } from "../../utils/addToDb";
@@ -8,6 +8,7 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const allProduct = useLoaderData();
   const navigate = useNavigate()
+  const {setCartLength} = useOutletContext();
 
   useEffect(() => {
     const storedCart = getAddToCart();
@@ -16,6 +17,7 @@ const Cart = () => {
       storedCartInt.includes(product.product_id)
     );
     setCart(cartList);
+    setCartLength(cartList.length)
 
   }, []);
 
@@ -29,6 +31,8 @@ const Cart = () => {
     setCart([]);
     localStorage.clear();
     navigate('/')
+    setCartLength(0);
+    
   }
   const totalCost = cart.reduce((a,b) => a + b.price, 0)
   console.log(cart.length)
@@ -36,6 +40,7 @@ const Cart = () => {
     const updatedCart = cart.filter(item => item.product_id !== id);
     setCart(updatedCart);
     localStorage.setItem('cart-items', JSON.stringify(updatedCart));
+    setCartLength(updatedCart.length)
     toast.success("Product Removed From Cart")
   }
   return (
