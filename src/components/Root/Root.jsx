@@ -7,7 +7,6 @@ import { getAddToCart } from "../../utils/addToDb";
 import { ToastContainer } from "react-toastify";
 const Root = () => {
 
-
   return (
     <div>
       <Navbar></Navbar>

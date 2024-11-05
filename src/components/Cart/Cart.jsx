@@ -32,7 +32,11 @@ const Cart = () => {
   }
   const totalCost = cart.reduce((a,b) => a + b.price, 0)
   console.log(cart.length)
-  
+  const handleRemoveCartItem = (id) =>{
+    const updatedCart = cart.filter(item => item.product_id !== id);
+    setCart(updatedCart);
+    localStorage.setItem('cart-items', JSON.stringify(updatedCart));
+  }
   return (
     <div>
       <div className="flex justify-between mt-4">
@@ -54,7 +58,7 @@ const Cart = () => {
       </div>
       <div>
         {cart.map((c) => (
-          <CartItem key={c.product_id} cart={c}></CartItem>
+          <CartItem key={c.product_id} cart={c} handleRemoveCartItem={handleRemoveCartItem}></CartItem>
         ))}
       </div>
 

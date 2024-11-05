@@ -15,13 +15,17 @@ const WishList = () => {
     );
     setWishList(wishListItems);
   }, [allProduct]);
-
+  const handleRemoveWishItem = (id) =>{
+    const updatedWish = wishList.filter(item => item.product_id !== id);
+    setWishList(updatedWish);
+    localStorage.setItem('wish-items', JSON.stringify(updatedWish));
+  }
   
 console.log(wishList.length)
   return (
     <div>
       {
-        wishList.map(wish=> <WishListItem key={wish.product_id} wish={wish}></WishListItem>)
+        wishList.map(wish=> <WishListItem key={wish.product_id} wish={wish} handleRemoveWishItem={handleRemoveWishItem}></WishListItem>)
       }
     </div>
   );
