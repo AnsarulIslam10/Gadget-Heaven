@@ -19,7 +19,7 @@ const Navbar = ({count}) => {
   return (
     <div
       className={`navbar rounded-t-xl max-w-7xl mt-8 mx-auto ${
-        pathname === "/" ? "bg-purple-600" : "bg-White"
+        pathname === "/" ? "bg-purple-600" : ""
       }`}
     >
       <div className="navbar-start">

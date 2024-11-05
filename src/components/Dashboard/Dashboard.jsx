@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { getAddToCart } from '../../utils/addToDb';
+import { useLocation } from 'react-router-dom';
 import Cart from '../Cart/Cart';
-
+import WishList from '../WishList/WishList';
 const Dashboard = () => {
-    const [cart, setCart] = useState([]);
-    const [sort, setSort] = useState([]);
-    const [count, setCount] = useState(0)
-    const allProduct = useLoaderData();
-    useEffect(()=>{
-        const storedCart = getAddToCart();
-        const storedCartInt = storedCart.map(id => parseInt(id));
-        const cartList = allProduct.filter(product => storedCartInt.includes(product.product_id));
-        setCart(cartList);
-        setCount(cartList.length)
-    },[])
-    console.log(cart)
+   const {pathname} = useLocation()
     return (
         <div className='max-w-7xl mx-auto'>
-            {
-                cart.map(c => <Cart key={c.product_id} cart={c}></Cart>)
-            }
+           {pathname === '/dashboard' ? <Cart></Cart> : pathname === '/dashboard/cart' ? <Cart></Cart> : pathname === '/dashboard/wishlist'? <WishList></WishList> : ''}
         </div>
     );
 };

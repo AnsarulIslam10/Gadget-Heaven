@@ -20,7 +20,7 @@ const Hero = () => {
             ></Heading>
           ) : pathname === "/statistics" ? (
             <Heading title={"Statistics"}></Heading>
-          ) : pathname === "/dashboard"|| pathname === '/dashboard/cart' || pathname === 'dashboard/wishlist' ? (
+          ) : pathname === "/dashboard" || pathname === '/dashboard/cart' || pathname === '/dashboard/wishlist' ? (
             <Heading title={"Dashboard"}></Heading>
           ) : (
             ""
@@ -30,16 +30,27 @@ const Hero = () => {
             next level. From smart devices to the coolest accessories, we have
             it all!
           </p>
-          {pathname === "/" ? (
-            <button className="btn rounded-full">Shop Now</button>
-          ) : pathname === "/dashboard" || pathname === '/dashboard/cart' || pathname === 'dashboard/wishlist' ? (
-            <>
-              <NavLink to={'/dashboard/cart'} className="btn rounded-full">Cart</NavLink>{" "}
-              <NavLink to={'/dashboard/wishlist'} className="btn rounded-full">Wishlist</NavLink>
-            </>
-          ) : (
-            ""
-          )}
+          <>
+            {pathname === "/" ? (
+              <button className="btn rounded-full">Shop Now</button>
+            ) : pathname === "/dashboard" ||
+              pathname === "/dashboard/cart" ||
+              pathname === "/dashboard/wishlist" ? (
+              <>
+                <NavLink to={"/dashboard/cart"} className="btn rounded-full">
+                  Cart
+                </NavLink>
+                <NavLink
+                  to={"/dashboard/wishlist"}
+                  className="btn rounded-full"
+                >
+                  Wishlist
+                </NavLink>
+              </>
+            ) : (
+              ""
+            )}
+          </>
         </div>
       </div>
     </div>
