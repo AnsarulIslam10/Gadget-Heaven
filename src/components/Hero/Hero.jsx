@@ -1,9 +1,13 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Heading from "../Heading/Heading";
 
 const Hero = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate()
+  const handleShopNowbtn=()=>{
+    navigate('/dashboard')
+  }
   return (
     <div
       className={` mx-auto hero bg-purple-600 text-white  pt-8 ${
@@ -32,7 +36,7 @@ const Hero = () => {
           </p>
           <>
             {(pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? (
-              <button className="btn rounded-full">Shop Now</button>
+              <button onClick={handleShopNowbtn} className="btn rounded-full">Shop Now</button>
             ) : pathname === "/dashboard" ||
               pathname === "/dashboard/cart" ||
               pathname === "/dashboard/wishlist" ? (
