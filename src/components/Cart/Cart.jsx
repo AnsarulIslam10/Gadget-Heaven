@@ -24,11 +24,12 @@ const Cart = () => {
    
   }
 
-  const handleModalClose =()=>{
+  const handlePurchase = () =>{
     setCart([]);
     localStorage.clear();
+  }
+  const handleModalClose =()=>{
     navigate('/')
-   
   }
   const totalCost = cart.reduce((a,b) => a + b.price, 0)
   console.log(cart.length)
@@ -49,7 +50,7 @@ const Cart = () => {
             Sort By Price <RiSortDesc className="text-xl" />
           </button>
           <button
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={() => {document.getElementById("my_modal_1").showModal(); handlePurchase()}}
             className="btn bg-purple-500 rounded-full text-white"
           >
             Perchase
@@ -63,7 +64,6 @@ const Cart = () => {
       </div>
 
       {/* modal */}
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
@@ -72,7 +72,6 @@ const Cart = () => {
           </p>
           <div className="modal-action">
             <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
               <button onClick={handleModalClose} className="btn">
                 Close
               </button>
