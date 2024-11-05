@@ -17,8 +17,8 @@ const Home = () => {
         <h2 className="text-center text-4xl font-bold mb-12">
           Explore Cutting-Edge Gadgets
         </h2>
-        <div className="flex flex-col gap-4 md:grid md:grid-cols-12 max-w-7xl mx-auto">
-          <div className="col-span-3 bg-white p-8 mx-4 rounded-xl">
+        <div className="flex flex-col gap-4 md:grid md:grid-cols-12 max-w-7xl mx-auto mb-24">
+          <div className="col-span-3 h-[335px] bg-white p-8 mx-4 rounded-xl">
             <Categories></Categories>
           </div>
           <div className="col-span-9">
