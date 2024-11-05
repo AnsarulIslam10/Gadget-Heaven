@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
-const Navbar = ({count}) => {
+import { useCart } from "../../utils/CountContext.jsx";
+const Navbar = ({cartCount}) => {
   const { pathname } = useLocation();
-
+  
   const links = (
     <>
       <li>
@@ -56,10 +57,11 @@ const Navbar = ({count}) => {
       <div className="navbar-end gap-2">
         <div className="p-2 bg-white rounded-full flex items-center">
           <IoCartOutline />
-          
+          {cartCount}
         </div>
         <div className="p-2 bg-white rounded-full">
           <IoHeartOutline />
+          
         </div>
       </div>
     </div>

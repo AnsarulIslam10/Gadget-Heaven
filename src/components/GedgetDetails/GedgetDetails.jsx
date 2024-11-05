@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
 import { addToCart, addToWishList } from "../../utils/addToDb";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 const GedgetDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
@@ -30,6 +31,9 @@ const GedgetDetails = () => {
 
   return (
     <div className="hero bg-white relative -top-32 max-w-7xl mx-auto rounded-xl">
+      <Helmet>
+        <title>Product Details | Gedget Heaven</title>
+      </Helmet>
       <div className="hero-content flex-col lg:flex-row">
         <img
           src={product_image}

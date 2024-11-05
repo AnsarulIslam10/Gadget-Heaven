@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import {
   BarChart,
   Bar,
@@ -71,6 +72,9 @@ const data = [
 const Statistics = () => {
   return (
     <div className="flex justify-center mt-10 p-8 bg-white max-w-7xl mx-auto">
+      <Helmet>
+        <title>Statistics | Gedget Heaven</title>
+      </Helmet>
       <BarChart width={1200} height={600} margin={{bottom: 100}} data={data}>
         <XAxis dataKey="product_title" angle={-30} textAnchor="end" ></XAxis>
         <YAxis dataKey="price"></YAxis>

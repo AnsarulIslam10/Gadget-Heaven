@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate} from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { RiSortDesc } from "react-icons/ri";
 import { getAddToCart } from "../../utils/addToDb";
@@ -7,7 +7,7 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const allProduct = useLoaderData();
   const navigate = useNavigate()
-
+  
   useEffect(() => {
     const storedCart = getAddToCart();
     const storedCartInt = storedCart.map((id) => parseInt(id));
@@ -16,19 +16,22 @@ const Cart = () => {
     );
     setCart(cartList);
 
-    localStorage.setItem("cartLength", cart.length);
   }, []);
 
   const handleSortByPrice=()=>{
     const sortedCart = [...cart].sort((a,b) => b.price - a.price);
     setCart(sortedCart)
+   
   }
 
   const handleModalClose =()=>{
     setCart([]);
     localStorage.clear();
     navigate('/')
+   
   }
+
+  console.log(cart.length)
   return (
     <div>
       <div className="flex justify-between mt-4">
