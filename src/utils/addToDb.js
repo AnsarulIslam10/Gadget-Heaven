@@ -38,7 +38,8 @@ const addToWishList=(id)=>{
     }else{
         storedWishList.push(id);
         const storedWishListStr =JSON.stringify(storedWishList)
-        localStorage.setItem('cart-items', storedWishListStr)
+        localStorage.setItem('wish-items', storedWishListStr)
+        toast('product added to wishlist')
     }
 }
 

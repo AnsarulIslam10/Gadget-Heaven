@@ -25,6 +25,7 @@ const GedgetDetails = () => {
   };
   const handleAddToWishList = (id) => {
     addToWishList(id);
+    console.log('adding to wishlist', id)
   };
 
   return (
@@ -73,7 +74,7 @@ const GedgetDetails = () => {
           >
             Add to Cart <IoCartOutline></IoCartOutline>
           </button>
-          <button onClick={() => handleAddToWishList(currentId)}>
+          <button className="text-2xl p-4 bg-gray-100 rounded-full" onClick={() => handleAddToWishList(currentId)}>
             <IoHeartOutline></IoHeartOutline>
           </button>
         </div>

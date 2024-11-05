@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { RiSortDesc } from "react-icons/ri";
 import { getAddToCart } from "../../utils/addToDb";
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const [sort, setSort] = useState([]);
   const allProduct = useLoaderData();
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     const storedCart = getAddToCart();
     const storedCartInt = storedCart.map((id) => parseInt(id));
