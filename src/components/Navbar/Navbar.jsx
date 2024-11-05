@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 const Navbar = ({count}) => {
   const { pathname } = useLocation();
+
   const links = (
     <>
       <li>

@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       className={` mx-auto hero bg-purple-600 text-white  pt-8 ${
-        pathname === "/" ? "max-w-7xl pb-56 rounded-b-xl" : "w-full"
+        pathname === "/" ? "max-w-7xl pb-56 rounded-b-xl" : "w-full pb-24"
       }`}
     >
       <div className="hero-content text-center">
@@ -23,7 +23,7 @@ const Hero = () => {
           ) : pathname === "/dashboard" || pathname === '/dashboard/cart' || pathname === '/dashboard/wishlist' ? (
             <Heading title={"Dashboard"}></Heading>
           ) : (
-            ""
+            <Heading title={"Product Details"}></Heading>
           )}
           <p className="py-6 text-gray-300">
             Explore the latest gadgets that will take your experience to the

@@ -20,15 +20,15 @@ const GedgetDetails = () => {
     availability,
   } = product;
 
-  const handleAddToCart = (id) =>{
-    addToCart(id)
-  }
-  const handleAddToWishList = (id) =>{
-    addToWishList(id)
-  }
+  const handleAddToCart = (id) => {
+    addToCart(id);
+  };
+  const handleAddToWishList = (id) => {
+    addToWishList(id);
+  };
 
   return (
-    <div className="hero bg-white relative -top-52 max-w-7xl mx-auto rounded-xl">
+    <div className="hero bg-white relative -top-32 max-w-7xl mx-auto rounded-xl">
       <div className="hero-content flex-col lg:flex-row">
         <img
           src={product_image}
@@ -67,10 +67,13 @@ const GedgetDetails = () => {
             ></ReactStars>
             <p className="p-2 bg-gray-200 rounded-xl">{rating}</p>
           </div>
-          <button onClick={()=>handleAddToCart(currentId)} className="btn btn-primary">
+          <button
+            onClick={() => handleAddToCart(currentId)}
+            className="btn btn-primary"
+          >
             Add to Cart <IoCartOutline></IoCartOutline>
           </button>
-          <button onClick={()=>handleAddToWishList(currentId)}>
+          <button onClick={() => handleAddToWishList(currentId)}>
             <IoHeartOutline></IoHeartOutline>
           </button>
         </div>
