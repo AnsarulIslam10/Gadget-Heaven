@@ -21,7 +21,7 @@ const Navbar = ({cartCount}) => {
   return (
     <div
       className={`navbar rounded-t-xl max-w-7xl mt-8 mx-auto ${
-        pathname === "/" ? "bg-purple-600" : ""
+        (pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? "bg-purple-600" : ""
       }`}
     >
       <div className="navbar-start">

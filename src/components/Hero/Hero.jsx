@@ -7,12 +7,12 @@ const Hero = () => {
   return (
     <div
       className={` mx-auto hero bg-purple-600 text-white  pt-8 ${
-        pathname === "/" ? "max-w-7xl pb-56 rounded-b-xl" : "w-full pb-24"
+        (pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches")? "max-w-7xl pb-56 rounded-b-xl" : "w-full pb-24"
       }`}
     >
       <div className="hero-content text-center">
         <div className="max-w-4xl">
-          {pathname === "/" ? (
+          {(pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? (
             <Heading
               title={
                 "Upgrade Your Tech Accessorize with Gadget Heaven Accessories"
@@ -31,7 +31,7 @@ const Hero = () => {
             it all!
           </p>
           <>
-            {pathname === "/" ? (
+            {(pathname === "/" || pathname === "/category/Laptop" || pathname === "/category/iPhone" || pathname === "/category/Phone" || pathname === "/category/Smart%20Watches") ? (
               <button className="btn rounded-full">Shop Now</button>
             ) : pathname === "/dashboard" ||
               pathname === "/dashboard/cart" ||
