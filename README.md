@@ -1,6 +1,6 @@
 ## [Live Site Link](https://gadget-heaven-10.netlify.app/)
 
-## [Requirement Document](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08-.pdf)
+## [Requirement Document](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf?fbclid=IwY2xjawGX8IlleHRuA2FlbQIxMAABHXyb4cpDLWHuRUtcTKACVyLyrre-mO7Un10Y-kmk5H8_YlHvoqzkaokRfA_aem_vcvdyoh4Wk8QerJY9hdclA)
 
 ## List of React Fundamental concepts used in the project:-
 - React Router

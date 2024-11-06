@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { BarChart, Bar, XAxis, YAxis } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Area } from "recharts";
 const data = [
   {
     product_id: 1,
@@ -69,15 +69,21 @@ const Statistics = () => {
     <div className=" max-w-7xl mx-auto mb-8">
       <h1 className="text-4xl mt-4 font-bold mb-4">Statistics</h1>
       <div className="flex justify-center mt-4 p-8 bg-white">
-      <Helmet>
-        <title>Statistics | Gadget Heaven</title>
-      </Helmet>
-      <BarChart width={1200} height={600} margin={{ bottom: 100 }} data={data}>
-        <XAxis dataKey="product_title" angle={-30} textAnchor="end"></XAxis>
-        <YAxis dataKey="price"></YAxis>
-        <Bar dataKey="price" fill="#84d8" />
-      </BarChart>
-    </div>
+        <Helmet>
+          <title>Statistics | Gadget Heaven</title>
+        </Helmet>
+        <BarChart
+          width={1200}
+          height={600}
+          margin={{ bottom: 100 }}
+          data={data}
+        >
+          <XAxis dataKey="product_title" angle={-30} textAnchor="end"></XAxis>
+          <YAxis dataKey="price"></YAxis>
+          <Tooltip />
+          <Bar dataKey="price" fill="#8884d8" />
+        </BarChart>
+      </div>
     </div>
   );
 };
