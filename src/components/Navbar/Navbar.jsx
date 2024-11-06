@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
-import { getAddToCart } from "../../utils/addToDb";
 
-
-const Navbar = ({cartLength, wishlistLength}) => {
+const Navbar = ({ cartLength, wishlistLength }) => {
   const { pathname } = useLocation();
-  
+
   const links = (
     <>
       <li>
@@ -66,7 +64,9 @@ const Navbar = ({cartLength, wishlistLength}) => {
         <a className="btn btn-ghost text-xl">Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 md:text-lg md:font-medium gap-3">{links}</ul>
+        <ul className="menu menu-horizontal px-1 md:text-lg md:font-medium gap-3">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end gap-2">
         <div className="p-2 bg-white rounded-full flex items-center">

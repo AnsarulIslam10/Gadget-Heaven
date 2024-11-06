@@ -6,11 +6,10 @@ import Root from "./components/Root/Root";
 import Home from "./components/Home/Home";
 import Statistics from "./components/Statistics/Statistics";
 import Dashboard from "./components/Dashboard/Dashboard";
-import Gedgets from "./components/Gedgets/Gedgets";
-import GedgetDetails from "./components/GedgetDetails/GedgetDetails";
+import Gadgets from "./components/Gadgets/Gadgets.jsx";
+import GadgetDetails from "./components/GadgetDetails/GadgetDetails.jsx";
 import Cart from "./components/Cart/Cart";
 import WishList from "./components/WishList/WishList";
-import { CartProvider } from "./utils/CountContext.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import Faq from "./components/Faq/Faq.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
@@ -28,12 +27,12 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/",
-            element: <Gedgets></Gedgets>,
+            element: <Gadgets></Gadgets>,
             loader: () => fetch("/products.json"),
           },
           {
             path: "/category/:category",
-            element: <Gedgets></Gedgets>,
+            element: <Gadgets></Gadgets>,
             loader: () => fetch("/products.json"),
           },
         ],
@@ -59,14 +58,14 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/gedgetDetails/:product_id",
-        element: <GedgetDetails></GedgetDetails>,
+        path: "/gadgetDetails/:product_id",
+        element: <GadgetDetails></GadgetDetails>,
         loader: () => fetch("/products.json"),
       },
       {
-        path: '/faq',
-        element: <Faq></Faq>
-      }
+        path: "/faq",
+        element: <Faq></Faq>,
+      },
     ],
   },
 ]);

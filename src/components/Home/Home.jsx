@@ -1,16 +1,13 @@
 import React from "react";
-import Hero from "../Hero/Hero";
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
-import Gedgets from "../Gedgets/Gedgets";
-import { Outlet, useLoaderData } from "react-router-dom";
+import Gadgets from "../Gadgets/Gadgets";
 import { Helmet } from "react-helmet-async";
 const Home = () => {
-  // const categories = useLoaderData();
   return (
     <div>
       <Helmet>
-        <title>Home | Gedget Heaven</title>
+        <title>Home | Gadget Heaven</title>
       </Helmet>
       <Banner></Banner>
       <div>
@@ -22,7 +19,7 @@ const Home = () => {
             <Categories></Categories>
           </div>
           <div className="col-span-9">
-            <Gedgets></Gedgets>
+            <Gadgets></Gadgets>
           </div>
         </div>
       </div>

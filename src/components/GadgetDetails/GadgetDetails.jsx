@@ -1,17 +1,21 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useState } from "react";
 import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import ReactStars from "react-rating-stars-component";
-import { addToCart, addToWishList, getAddToCart, getAddToWishList } from "../../utils/addToDb";
+import {
+  addToCart,
+  addToWishList,
+  getAddToCart,
+  getAddToWishList,
+} from "../../utils/addToDb";
 import { Helmet } from "react-helmet-async";
 
-
-const GedgetDetails = () => {
+const GadgetDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
   const data = useLoaderData();
   const product = data.find((p) => p.product_id === id);
-  const [isDisabled, setIsDisabled] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false);
   const {
     product_id: currentId,
     product_title,
@@ -23,28 +27,25 @@ const GedgetDetails = () => {
     availability,
   } = product;
 
-const { setCartLength, setWishlistLength } = useOutletContext();
+  const { setCartLength, setWishlistLength } = useOutletContext();
   const handleAddToCart = (id) => {
     addToCart(id);
     const cart = getAddToCart();
     const newCartLength = cart.length;
     setCartLength(newCartLength);
-    
   };
   const handleAddToWishList = (id) => {
     addToWishList(id);
-    setIsDisabled(true)
+    setIsDisabled(true);
     const wish = getAddToWishList();
     const newWishlistLength = wish.length;
-    setWishlistLength(newWishlistLength)
+    setWishlistLength(newWishlistLength);
   };
-
-
 
   return (
     <div className="hero bg-white relative -top-32 max-w-7xl mx-auto rounded-xl">
       <Helmet>
-        <title>Product Details | Gedget Heaven</title>
+        <title>Product Details | Gadget Heaven</title>
       </Helmet>
       <div className="hero-content flex-col lg:flex-row">
         <img
@@ -85,15 +86,23 @@ const { setCartLength, setWishlistLength } = useOutletContext();
             <p className="p-2 bg-gray-200 rounded-xl">{rating}</p>
           </div>
           <div className="flex items-center gap-2">
-          <button
-            onClick={() => handleAddToCart(currentId)}
-            className="btn btn-primary hover:bg-purple-400"
-          >
-            Add to Cart <IoCartOutline className="text-3xl"></IoCartOutline>
-          </button>
-          <button onClick={() => handleAddToWishList(currentId)} className={`text-2xl p-4 bg-gray-100 rounded-full ${isDisabled? 'bg-gray-400 cursor-not-allowed': 'bg-gray-100 hover:bg-gray-300'}`} disabled={isDisabled}>
-            <IoHeartOutline></IoHeartOutline>
-          </button>
+            <button
+              onClick={() => handleAddToCart(currentId)}
+              className="btn btn-primary hover:bg-purple-400"
+            >
+              Add to Cart <IoCartOutline className="text-3xl"></IoCartOutline>
+            </button>
+            <button
+              onClick={() => handleAddToWishList(currentId)}
+              className={`text-2xl p-4 bg-gray-100 rounded-full ${
+                isDisabled
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-gray-100 hover:bg-gray-300"
+              }`}
+              disabled={isDisabled}
+            >
+              <IoHeartOutline></IoHeartOutline>
+            </button>
           </div>
         </div>
       </div>
@@ -101,4 +110,4 @@ const { setCartLength, setWishlistLength } = useOutletContext();
   );
 };
 
-export default GedgetDetails;
+export default GadgetDetails;

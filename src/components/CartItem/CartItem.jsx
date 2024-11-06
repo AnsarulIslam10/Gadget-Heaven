@@ -1,7 +1,7 @@
 import React from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 const CartItem = ({ cart, handleRemoveCartItem }) => {
-    const {product_id, product_title, product_image, price, description } = cart;
+  const { product_id, product_title, product_image, price, description } = cart;
   return (
     <div>
       <div className="flex justify-between bg-white mb-2 p-6 mt-8 rounded-xl shadow-md">
@@ -21,7 +21,10 @@ const CartItem = ({ cart, handleRemoveCartItem }) => {
             </p>
           </div>
         </div>
-        <button onClick={()=>handleRemoveCartItem(product_id)} className="text-5xl">
+        <button
+          onClick={() => handleRemoveCartItem(product_id)}
+          className="text-5xl"
+        >
           <IoCloseCircleOutline></IoCloseCircleOutline>
         </button>
       </div>

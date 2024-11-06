@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const WishList = () => {
   const [wishList, setWishList] = useState([]);
   const allProduct = useLoaderData();
-  const {setWishlistLength} = useOutletContext();
+  const { setWishlistLength } = useOutletContext();
   useEffect(() => {
     const storedWishList = getAddToWishList();
     const storedWishListInt = storedWishList.map((id) => parseInt(id));
@@ -15,24 +15,27 @@ const WishList = () => {
       storedWishListInt.includes(product.product_id)
     );
     setWishList(wishListItems);
-    setWishlistLength(wishListItems.length)
-    
+    setWishlistLength(wishListItems.length);
   }, [allProduct]);
-  const handleRemoveWishItem = (id) =>{
-    const updatedWish = wishList.filter(item => item.product_id !== id);
+  const handleRemoveWishItem = (id) => {
+    const updatedWish = wishList.filter((item) => item.product_id !== id);
     setWishList(updatedWish);
-    localStorage.setItem('wish-items', JSON.stringify(updatedWish));
-    setWishlistLength(updatedWish.length)
-    toast.success('Product Removed From Wishlist')
-  }
-  
-console.log(wishList.length)
+    localStorage.setItem("wish-items", JSON.stringify(updatedWish));
+    setWishlistLength(updatedWish.length);
+    toast.success("Product Removed From Wishlist");
+  };
+
+  console.log(wishList.length);
   return (
     <div className="mt-4">
       <h2 className="text-4xl font-bold">Wishlist</h2>
-      {
-        wishList.map(wish=> <WishListItem key={wish.product_id} wish={wish} handleRemoveWishItem={handleRemoveWishItem}></WishListItem>)
-      }
+      {wishList.map((wish) => (
+        <WishListItem
+          key={wish.product_id}
+          wish={wish}
+          handleRemoveWishItem={handleRemoveWishItem}
+        ></WishListItem>
+      ))}
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
-const WishListItem = ({wish, handleRemoveWishItem}) => {
-    const {product_id, product_title, description, price, product_image} = wish;
-    console.log(product_title)
+const WishListItem = ({ wish, handleRemoveWishItem }) => {
+  const { product_id, product_title, description, price, product_image } = wish;
+  console.log(product_title);
   return (
     <div>
       <div>
@@ -23,7 +23,10 @@ const WishListItem = ({wish, handleRemoveWishItem}) => {
               </p>
             </div>
           </div>
-          <button onClick={()=>handleRemoveWishItem(product_id)} className="text-5xl">
+          <button
+            onClick={() => handleRemoveWishItem(product_id)}
+            className="text-5xl"
+          >
             <IoCloseCircleOutline></IoCloseCircleOutline>
           </button>
         </div>
