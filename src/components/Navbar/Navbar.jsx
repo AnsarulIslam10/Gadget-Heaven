@@ -91,15 +91,13 @@ const Navbar = ({ cartLength, wishlistLength }) => {
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <div className="p-2 text-3xl bg-white rounded-full flex items-center">
+        <div className="p-2 text-xl sm:text-2xl md:text-3xl bg-white rounded-full flex items-center">
           <IoCartOutline />
           <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{cartLength}</div>
-          
         </div>
-        <div className="p-2 text-3xl bg-white rounded-full flex items-center">
+        <div className="p-2 text-xl sm:text-2xl md:text-3xl bg-white rounded-full flex items-center">
           <IoHeartOutline />
-          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{wishlistLength}</div>
-          
+          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{wishlistLength}</div>  
         </div>
       </div>
     </div>

@@ -85,7 +85,7 @@ const Cart = () => {
             />
             <h3 className="font-bold text-2xl">Payment Successfully</h3>
             <p className="py-2">Thanks for purchasing.</p>
-            <p className="font-bold">Total:{totalCost}</p>
+            <p className="font-bold">Total: ${totalCost}</p>
           </div>
           <div className="modal-action flex justify-center">
             <form method="dialog">

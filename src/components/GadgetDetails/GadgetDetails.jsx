@@ -53,16 +53,16 @@ const GadgetDetails = () => {
           className="w-[350px] rounded-lg border p-6 m-8"
         />
         <div>
-          <h1 className="text-3xl font-bold">{product_title}</h1>
-          <p>
+          <h1 className="text-3xl font-bold mb-2">{product_title}</h1>
+          <p className="text-lg font-medium">
             <span className="font-bold">Price:</span> {price}
           </p>
           {availability ? (
-            <p className="px-2 py-1 border border-green-500 inline-block rounded-xl text-green-500">
+            <p className="px-2 py-1 border mt-2 border-green-500 font-bold inline-block rounded-xl text-green-500">
               In stock
             </p>
           ) : (
-            <p className="px-2 py-1 border border-green-500 inline-block rounded-xl text-green-500">
+            <p className="px-2 py-1 mt-2 border border-red-500 inline-block rounded-xl font-bold text-red-500">
               Out of Stock
             </p>
           )}
@@ -87,7 +87,7 @@ const GadgetDetails = () => {
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => handleAddToCart(currentId)}
+              onClick={() => handleAddToCart(currentId)} disabled={availability === false}
               className="btn btn-primary hover:bg-purple-400"
             >
               Add to Cart <IoCartOutline className="text-3xl"></IoCartOutline>

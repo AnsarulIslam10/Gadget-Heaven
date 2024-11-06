@@ -15,7 +15,7 @@ const Home = () => {
           Explore Cutting-Edge Gadgets
         </h2>
         <div className="flex flex-col gap-4 md:grid md:grid-cols-12 max-w-7xl mx-auto mb-24">
-          <div className="col-span-3 h-[520px] bg-white p-8 mx-4 rounded-xl">
+          <div className="col-span-3 sm:h-[470px] lg:h-[520px] bg-white p-2 lg:p-8 mx-4 rounded-xl">
             <Categories></Categories>
           </div>
           <div className="col-span-9">

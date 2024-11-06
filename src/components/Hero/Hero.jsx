@@ -75,7 +75,7 @@ const Hero = () => {
                   className={({ isActive }) =>
                     `btn btn-outline font-bold mr-2 rounded-full ${
                       isActive || pathname === "/dashboard"
-                        ? "bg-white border-none text-black"
+                        ? "bg-white border-none text-purple-600"
                         : ""
                     }`
                   }
@@ -86,7 +86,7 @@ const Hero = () => {
                   to={"/dashboard/wishlist"}
                   className={({ isActive }) =>
                     `btn btn-outline font-bold rounded-full ${
-                      isActive ? "bg-white border-none text-black" : ""
+                      isActive ? "bg-white border-none text-purple-600" : ""
                     }`
                   }
                 >
