@@ -12,7 +12,6 @@ const getAddToCart = () => {
 const addToCart = (id) => {
   const storedCart = getAddToCart();
   if (storedCart.includes(id)) {
-    console.log(id, "already exist");
     toast.warning("Product Already Added");
   } else {
     storedCart.push(id);
@@ -35,7 +34,6 @@ const getAddToWishList = () => {
 const addToWishList = (id) => {
   const storedWishList = getAddToWishList();
   if (storedWishList.includes(id)) {
-    console.log(id, "already exist");
   } else {
     storedWishList.push(id);
     const storedWishListStr = JSON.stringify(storedWishList);

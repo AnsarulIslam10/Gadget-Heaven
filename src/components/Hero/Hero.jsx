@@ -20,7 +20,7 @@ const Hero = () => {
         pathname === "/category/Chargers" ||
         pathname === "/category/Power%20Banks"
           ? "max-w-7xl pb-56 rounded-b-xl"
-          : "w-full pb-24"
+          : "w-full pb-8"
       }`}
     >
       <div className="hero-content text-center">

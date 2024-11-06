@@ -6,6 +6,7 @@ const Faq = () => {
       <Helmet>
         <title>FAQ | Gadget Heaven</title>
       </Helmet>
+      <h1 className="text-4xl font-bold uppercase mb-4">frequently asked questions:-</h1>
       <div className="shadow-lg p-4 mb-12 rounded-xl">
         <h2 className="text-2xl font-medium mb-2">Orders and Shipping</h2>
         <div className="collapse rounded-none mb-2 collapse-arrow bg-base-300">

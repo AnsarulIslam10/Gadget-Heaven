@@ -33,7 +33,6 @@ const Cart = () => {
     setWishlistLength(0);
   };
   const totalCost = cart.reduce((a, b) => a + b.price, 0);
-  console.log(cart.length);
   const handleRemoveCartItem = (id) => {
     const updatedCart = cart.filter((item) => item.product_id !== id);
     setCart(updatedCart);

@@ -5,7 +5,6 @@ import { useOutletContext } from "react-router-dom";
 const WishListItem = ({ wish, handleRemoveWishItem }) => {
   const { setCartLength } = useOutletContext();
   const { product_id, product_title, description, price, product_image } = wish;
-  console.log(product_title);
 
   const handleAddToCart = (id) => {
     addToCart(id);
