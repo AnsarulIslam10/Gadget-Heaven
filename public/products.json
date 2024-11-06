@@ -214,7 +214,7 @@
     "product_title": "Anker PowerCore 10000",
     "product_image": "https://i.ibb.co.com/5v150r6/Anker-Power-Core-10000.png",
     "category": "Power Banks",
-    "price": 30,
+    "price": 80,
     "description": "Compact and lightweight power bank with 10000mAh capacity.",
     "specification": [
       "USB-C input",
@@ -229,7 +229,7 @@
     "product_title": "RAVPower 26800mAh Power Bank",
     "product_image": "https://i.ibb.co.com/mv7vHFR/RAVPower-26800m-Ah-Power-Bank.jpg",
     "category": "Power Banks",
-    "price": 40,
+    "price": 65,
     "description": "High-capacity power bank with multiple ports for charging.",
     "specification": [
       "26800mAh capacity",
@@ -244,7 +244,7 @@
     "product_title": "Belkin 30W USB-C Charger",
     "product_image": "https://i.ibb.co.com/WfwfNDV/Belkin-30-W-USB-C-Charger.webp",
     "category": "Chargers",
-    "price": 25,
+    "price": 60,
     "description": "Compact USB-C charger with fast charging capabilities.",
     "specification": [
       "30W power delivery",
@@ -259,7 +259,7 @@
     "product_title": "Anker 20W USB-C Charger",
     "product_image": "https://i.ibb.co.com/0XcKBfs/Anker-20-W-USB-C-Charger.webp",
     "category": "Chargers",
-    "price": 20,
+    "price": 55,
     "description": "Fast USB-C wall charger for iPhone and Android devices.",
     "specification": [
       "20W power delivery",
