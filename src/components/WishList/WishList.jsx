@@ -25,10 +25,9 @@ const WishList = () => {
     toast.success("Product Removed From Wishlist");
   };
 
-  console.log(wishList.length);
   return (
     <div className="mt-4">
-      <h2 className="text-4xl font-bold">Wishlist</h2>
+      <h2 className="md:text-4xl text-xl sm:text-2xl font-bold">Wishlist</h2>
       {wishList.map((wish) => (
         <WishListItem
           key={wish.product_id}

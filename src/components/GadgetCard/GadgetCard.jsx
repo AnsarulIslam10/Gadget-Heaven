@@ -16,7 +16,7 @@ const GadgetCard = ({ product }) => {
         <h2 className="card-title">{product_title}</h2>
         <p>Price: ${price}</p>
         <div className="card-actions">
-          <Link to={`/gadgetDetails/${product_id}`} className="btn btn-primary">
+          <Link to={`/gadgetDetails/${product_id}`} className="btn btn-outline border-purple-600 border-4 text-purple-600">
             View Details
           </Link>
         </div>

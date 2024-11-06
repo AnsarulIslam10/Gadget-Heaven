@@ -43,21 +43,21 @@ const Cart = () => {
   };
   return (
     <div>
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between items-center mt-4">
         <div>
-          <h2 className="text-4xl font-bold">Cart</h2>
+          <h2 className="md:text-4xl text-xl sm:text-2xl font-bold">Cart</h2>
         </div>
-        <div className="flex items-center gap-2">
-          <h3 className="text-lg font-bold">Total Cost: ${totalCost}</h3>
+        <div className="flex items-center gap-1 md:gap-2">
+          <h3 className="md:text-lg text-sm sm:font-semibold md:font-bold">Total Cost: ${totalCost}</h3>
           <button
             onClick={handleSortByPrice}
-            className="btn btn-ghost border-4 border-purple-500 rounded-full font-bold text-purple-500"
+            className="btn btn-sm md:btn-md text-sm btn-ghost border-2 border-purple-500 rounded-full font-medium md:font-bold text-purple-500"
           >
-            Sort By Price <RiSortDesc className="text-xl" />
+            Sort By Price <RiSortDesc className="sm:text-xl" />
           </button>
           <button
             onClick={() => document.getElementById("my_modal_1").showModal()}
-            className="btn bg-purple-500 rounded-full text-white"
+            className="btn bg-purple-500 btn-sm md:btn-md text-sm rounded-full font-medium text-white"
             disabled={cart.length === 0 || totalCost === 0}
           >
             Perchase

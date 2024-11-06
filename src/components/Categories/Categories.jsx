@@ -15,7 +15,7 @@ const Categories = () => {
       <NavLink
         className={({ isActive }) =>
           `border border-gray-300 rounded-xl py-2 ${
-            isActive ? "bg-blue-400 text-white" : "bg-gray-200"
+            isActive ? "bg-purple-600 text-white" : "bg-gray-200"
           }`
         }
         to={"/"}
@@ -26,7 +26,7 @@ const Categories = () => {
         <NavLink
           className={({ isActive }) =>
             `border border-gray-300 rounded-xl py-2 ${
-              isActive ? "bg-blue-400 text-white" : "bg-gray-200"
+              isActive ? "bg-purple-600 text-white" : "bg-gray-200"
             }`
           }
           key={category.id}

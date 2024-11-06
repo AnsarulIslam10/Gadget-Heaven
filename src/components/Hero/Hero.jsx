@@ -73,9 +73,9 @@ const Hero = () => {
                 <NavLink
                   to={"/dashboard/cart"}
                   className={({ isActive }) =>
-                    `btn btn-outline font-bold rounded-full ${
+                    `btn btn-outline font-bold mr-2 rounded-full ${
                       isActive || pathname === "/dashboard"
-                        ? "bg-white text-black"
+                        ? "bg-white border-none text-black"
                         : ""
                     }`
                   }
@@ -86,7 +86,7 @@ const Hero = () => {
                   to={"/dashboard/wishlist"}
                   className={({ isActive }) =>
                     `btn btn-outline font-bold rounded-full ${
-                      isActive ? "bg-white text-black" : ""
+                      isActive ? "bg-white border-none text-black" : ""
                     }`
                   }
                 >

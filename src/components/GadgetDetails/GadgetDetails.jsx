@@ -16,6 +16,7 @@ const GadgetDetails = () => {
   const data = useLoaderData();
   const product = data.find((p) => p.product_id === id);
   const [isDisabled, setIsDisabled] = useState(false);
+  const { setCartLength, setWishlistLength } = useOutletContext();
   const {
     product_id: currentId,
     product_title,
@@ -27,7 +28,6 @@ const GadgetDetails = () => {
     availability,
   } = product;
 
-  const { setCartLength, setWishlistLength } = useOutletContext();
   const handleAddToCart = (id) => {
     addToCart(id);
     const cart = getAddToCart();
@@ -43,14 +43,14 @@ const GadgetDetails = () => {
   };
 
   return (
-    <div className="hero bg-white relative -top-32 max-w-7xl mx-auto rounded-xl">
+    <div className="hero bg-white relative -top-32 max-w-5xl mx-auto rounded-xl">
       <Helmet>
         <title>Product Details | Gadget Heaven</title>
       </Helmet>
       <div className="hero-content flex-col lg:flex-row">
         <img
           src={product_image}
-          className="max-w-sm rounded-lg border p-6 m-8"
+          className="w-[350px] rounded-lg border p-6 m-8"
         />
         <div>
           <h1 className="text-3xl font-bold">{product_title}</h1>

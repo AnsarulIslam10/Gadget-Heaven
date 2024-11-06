@@ -23,7 +23,7 @@ const Navbar = ({ cartLength, wishlistLength }) => {
   );
   return (
     <div
-      className={`navbar rounded-t-xl max-w-7xl pt-4 mx-auto ${
+      className={`navbar rounded-t-xl max-w-7xl pt-4 mx-auto px-8 ${
         pathname === "/" ||
         pathname === "/category/Laptop" ||
         pathname === "/category/iPhone" ||
@@ -61,21 +61,45 @@ const Navbar = ({ cartLength, wishlistLength }) => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+        <a  className={`text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold ${
+        pathname === "/" ||
+        pathname === "/category/Laptop" ||
+        pathname === "/category/iPhone" ||
+        pathname === "/category/Phone" ||
+        pathname === "/category/Computers" ||
+        pathname === "/category/Chargers" ||
+        pathname === "/category/Power%20Banks" ||
+        pathname === "/category/Smart%20Watches"
+          ? "text-white"
+          : "text-black"
+      }`}>Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 md:text-lg md:font-medium gap-3">
+        <ul  className={`menu menu-horizontal px-1 md:text-lg md:font-medium gap-3 ${
+        pathname === "/" ||
+        pathname === "/category/Laptop" ||
+        pathname === "/category/iPhone" ||
+        pathname === "/category/Phone" ||
+        pathname === "/category/Computers" ||
+        pathname === "/category/Chargers" ||
+        pathname === "/category/Power%20Banks" ||
+        pathname === "/category/Smart%20Watches"
+          ? "text-white"
+          : "text-black"
+      }`}>
           {links}
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <div className="p-2 bg-white rounded-full flex items-center">
+        <div className="p-2 text-3xl bg-white rounded-full flex items-center">
           <IoCartOutline />
-          {cartLength}
+          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{cartLength}</div>
+          
         </div>
-        <div className="p-2 bg-white rounded-full">
+        <div className="p-2 text-3xl bg-white rounded-full flex items-center">
           <IoHeartOutline />
-          {wishlistLength}
+          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{wishlistLength}</div>
+          
         </div>
       </div>
     </div>
