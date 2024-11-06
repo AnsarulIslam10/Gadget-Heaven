@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 
 const Navbar = ({ cartLength, wishlistLength }) => {
@@ -91,14 +91,18 @@ const Navbar = ({ cartLength, wishlistLength }) => {
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <div className="p-2 text-xl sm:text-2xl md:text-3xl bg-white rounded-full flex items-center">
+       <Link to={'/dashboard/cart'} className="flex">
+       <div className="p-2 text-xl sm:text-2xl md:text-3xl shadow-lg bg-white rounded-full flex items-center">
           <IoCartOutline />
-          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{cartLength}</div>
         </div>
-        <div className="p-2 text-xl sm:text-2xl md:text-3xl bg-white rounded-full flex items-center">
+          <div className="badge mb-4 relative -left-3 bg-purple-600 text-white py-3 badge-sm px-2">{cartLength}</div>
+       </Link>
+        <Link to={'/dashboard/wishlist'} className="flex">
+        <div className="p-2 text-xl sm:text-2xl md:text-3xl shadow-lg bg-white rounded-full flex items-center">
           <IoHeartOutline />
-          <div className="badge mb-4 bg-purple-600 text-white py-3 badge-sm">{wishlistLength}</div>  
         </div>
+          <div className="badge mb-4 relative -left-3 bg-purple-600 text-white py-3 badge-sm px-2">{wishlistLength}</div>  
+        </Link>
       </div>
     </div>
   );
