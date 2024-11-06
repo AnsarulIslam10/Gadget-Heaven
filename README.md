@@ -1,8 +1,28 @@
-# React + Vite
+## [Live Site Link](https://gadget-heaven-10.netlify.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [Requirement Document](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08-.pdf)
 
-Currently, two official plugins are available:
+## List of React Fundamental concepts used in the project:-
+- React Router
+- useState
+- useEffect
+- Conditional Rendering
+- Toast Notifications
+- Props and Data Passing
+- External Libraries
+- Event Handling
+- Dynamic Data Fetching
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+
+---
+**Used `Local Storage` for handling and managing data** 
+
+---
+
+##  5 features of my project
+1. Dynamic cart and wishlist management
+2. Product details
+3. Interactive toast notifications
+4. Responsive design
+5. Category wise product filtering
